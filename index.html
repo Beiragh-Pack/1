@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بیرق پک | آرشیو پک های بیرق</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#0b0b10;--panel:#13131b;--panel2:#191923;--line:#292936;--text:#f5f4fa;--muted:#9998ac;--purple:#3b82f6;--pink:#7dd3fc;--green:#6ee7b7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -20%,#302052 0,transparent 38%),var(--bg);color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh}
+button,input,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh;align-items:stretch}.sidebar{border-left:1px solid var(--line);padding:28px 18px;background:rgba(13,13,20,.8);position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:12px;padding:0 7px 30px}.brand-icon{width:43px;height:43px;border-radius:15px;background:linear-gradient(135deg,#60a5fa,#2563eb 60%,#38bdf8);display:grid;place-items:center;box-shadow:0 8px 28px #3b82f633}.brand-icon svg{width:23px}.brand-name{font-size:17px;font-weight:900;letter-spacing:-.5px}.brand-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.nav-label{font-size:11px;color:#77768a;padding:8px 12px 10px}.nav{display:grid;gap:6px}.nav button{display:flex;align-items:center;gap:12px;padding:12px 13px;border:1px solid transparent;border-radius:12px;color:#aaa9bb;background:transparent;text-align:right;font-size:13px;transition:.2s}.nav button:hover,.nav button.active{background:#3b82f61b;border-color:#3b82f638;color:#fff}.nav button.active .nav-ico{color:#b69aff}.nav-ico{width:19px;height:19px;display:grid;place-items:center;font-size:17px}.nav-count{margin-right:auto;color:#77768a;font-size:11px}.side-bottom{margin-top:auto;border:1px solid var(--line);background:linear-gradient(145deg,#171521,#111119);border-radius:16px;padding:15px}.side-bottom strong{font-size:12px}.side-bottom p{font-size:11px;color:var(--muted);line-height:1.9;margin:6px 0 12px}.mini-progress{height:4px;border-radius:8px;background:#292735;overflow:hidden}.mini-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--purple),var(--pink))}
+main{min-width:0;min-height:100vh;padding:30px clamp(18px,4vw,54px) 30px;max-width:1600px;width:100%;margin:0 auto;display:flex;flex-direction:column}.topbar{display:flex;align-items:center;gap:15px;justify-content:space-between;margin-bottom:36px}.donate-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 15px;border:1px solid rgba(125,211,252,.38);border-radius:13px;color:#fff;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap;background:linear-gradient(120deg,rgba(59,130,246,.22),rgba(125,211,252,.20),rgba(236,72,153,.16));box-shadow:0 8px 24px rgba(59,130,246,.14),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:transform .2s,border-color .2s,box-shadow .2s}.donate-btn:hover{transform:translateY(-2px);border-color:rgba(125,211,252,.7);box-shadow:0 12px 30px rgba(125,211,252,.22),inset 0 1px 0 rgba(255,255,255,.16)}.donate-heart{font-size:16px;color:#bae6fd;line-height:1}.crumb{color:var(--muted);font-size:12px}.crumb b{color:#fff;font-weight:600}.top-actions{display:flex;align-items:center;gap:10px}.admin-pill{border:1px solid #353043;background:#1b1727;border-radius:30px;padding:8px 12px;display:flex;align-items:center;gap:8px;font-size:12px}.admin-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px #6ee7b788}.icon-btn{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:#d5d3e4;font-size:16px}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:29px}.eyebrow{font-size:11px;letter-spacing:1px;color:#b69aff;font-weight:700;display:flex;align-items:center;gap:8px}.eyebrow:before{content:"";width:20px;height:1px;background:#60a5fa}.hero h1{font-size:clamp(25px,3vw,36px);letter-spacing:-1.3px;line-height:1.5;margin:9px 0 7px;font-weight:900}.hero p{font-size:13px;color:var(--muted);margin:0}.upload-btn{display:flex;align-items:center;gap:9px;border:0;border-radius:13px;color:white;font-weight:700;font-size:13px;padding:13px 18px;background:linear-gradient(110deg,#3b82f6,#1d4ed8);box-shadow:0 8px 28px #2563eb35;white-space:nowrap;transition:.2s}.upload-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px #2563eb55}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:30px}.stat{border:1px solid var(--line);border-radius:17px;padding:17px 19px;background:linear-gradient(145deg,#171720cc,#111119cc);display:flex;align-items:center;gap:14px;min-width:0}.stat-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;font-size:20px;background:#3b82f61b;color:#bca7ff}.stat:nth-child(2) .stat-icon{background:#06b6d41a;color:#67e8f9}.stat:nth-child(3) .stat-icon{background:#38bdf81a;color:#bae6fd}.stat-label{font-size:11px;color:var(--muted)}.stat-value{font-size:23px;font-weight:800;margin-top:2px;line-height:1.4}.stat-note{font-size:10px;color:#77768a;margin-top:2px}
+.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap}.section-title{font-size:17px;font-weight:800;display:flex;align-items:center;gap:10px}.section-title span{font-size:11px;font-weight:500;color:var(--muted);background:#20202b;padding:4px 8px;border-radius:7px}.filters{display:flex;gap:9px;flex-wrap:wrap}.search{position:relative;min-width:230px}.search input{width:100%;height:41px;border:1px solid var(--line);border-radius:11px;background:#12121a;color:#fff;padding:0 39px 0 12px;outline:none;font-size:12px}.search input:focus,select:focus{border-color:#3b82f6}.search:before{content:"⌕";position:absolute;right:13px;top:5px;color:#9998ac;font-size:24px}.filters select{height:41px;border:1px solid var(--line);border-radius:11px;background:#12121a;color:#c7c5d5;padding:0 12px;font-size:12px;outline:none}
+.category-row{display:flex;gap:8px;overflow-x:auto;padding:2px 0 16px;margin-bottom:4px;scrollbar-width:thin}.chip{white-space:nowrap;border:1px solid var(--line);background:#12121a;color:#aaa9bb;padding:8px 13px;border-radius:9px;font-size:11px}.chip.active,.chip:hover{background:#3b82f61c;color:#dbeafe;border-color:#7651c9}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}.file-card{border:1px solid var(--line);background:linear-gradient(160deg,#171720,#111118);border-radius:17px;overflow:visible;min-width:0;transition:transform .22s,border-color .22s;position:relative;z-index:0}.file-card:hover{transform:translateY(-4px);border-color:#51416d}.file-card.menu-open{z-index:30}.preview{height:145px;position:relative;display:grid;place-items:center;overflow:hidden;border-radius:16px 16px 0 0;background:radial-gradient(ellipse at 50% 100%,#6437aa66,transparent 60%),linear-gradient(135deg,#242039,#14131f)}.preview-image{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center center;border:0;border-radius:0;display:block;z-index:1}.preview:has(.preview-image):not(.no-image)::before,.preview:has(.preview-image):not(.no-image)::after{display:none}.type-tag,.favorite{z-index:2}.file-glyph{position:relative;z-index:2}.preview:before,.preview:after{content:"";position:absolute;border:1px solid #ffffff12;border-radius:50%;width:190px;height:190px;transform:rotate(-25deg)}.preview:after{width:130px;height:130px}.file-glyph{width:68px;height:78px;border-radius:11px;background:linear-gradient(145deg,#ffffff22,#ffffff08);border:1px solid #ffffff27;backdrop-filter:blur(8px);display:grid;place-items:center;font-size:18px;font-weight:900;letter-spacing:-1px;box-shadow:0 15px 35px #0005;z-index:1}.file-glyph:after{content:"";position:absolute;width:23px;height:23px;top:0;right:0;background:#ffffff18;clip-path:polygon(0 0,100% 100%,100% 0)}.type-tag{position:absolute;top:12px;right:12px;font-size:9px;font-weight:800;border-radius:6px;padding:5px 7px;background:#0d0d14b8;border:1px solid #ffffff18;color:#ddd}.favorite{position:absolute;top:10px;left:10px;width:29px;height:29px;border:1px solid #ffffff20;border-radius:9px;background:#0d0d14a8;color:#b9b5c8;font-size:16px}.favorite.on{color:#bae6fd}.pin-badge{position:absolute;top:45px;left:10px;z-index:3;width:29px;height:29px;display:inline-flex;align-items:center;justify-content:center;padding:0;border-radius:9px;border:1px solid rgba(255,255,255,.26);background:rgba(8,15,30,.62);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 14px rgba(0,0,0,.22)}.pin-badge svg{width:15px;height:15px;display:block;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.file-card.is-pinned{border-color:rgba(147,197,253,.35)}.file-card.is-pinned:hover{border-color:rgba(147,197,253,.6)}.card-body{padding:15px}.file-title{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px}.file-desc{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:17px}.file-meta{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #282833;margin-top:14px;padding-top:12px;color:#8c8a9f;font-size:10px;gap:8px}.file-meta span{display:flex;align-items:center;gap:5px}.card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:13px;gap:8px}.download-btn{flex:1;border:1px solid #4d3a70;background:#3b82f618;color:#dbeafe;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:700}.download-btn:hover{background:#3b82f632}.card-bottom{display:block;position:relative}.download-btn{width:100%}.parts-menu{position:relative;top:auto;right:auto;left:auto;width:100%;z-index:40;display:grid;grid-template-columns:minmax(0,1fr);gap:6px;margin-top:0;padding:0 7px;border:1px solid transparent;border-radius:11px;background:transparent;box-shadow:none;max-height:0;opacity:0;transform:translateY(-7px) scale(.985);transform-origin:top center;overflow:hidden;visibility:hidden;pointer-events:none;transition:max-height .38s cubic-bezier(.2,.75,.25,1),opacity .24s ease,transform .34s cubic-bezier(.2,.75,.25,1),padding .34s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}.parts-menu.open{max-height:360px;opacity:1;transform:translateY(0) scale(1);padding:7px;border-color:#3a314d;background:#100f18;box-shadow:0 12px 28px #0008;visibility:visible;pointer-events:auto}.part-link{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:right;padding:9px 10px;border:1px solid #292536;border-radius:8px;background:#191722;color:#e5ddff;text-decoration:none;font-size:11px;opacity:0;transform:translateY(-5px);transition:border-color .2s ease,background .2s ease,opacity .24s ease,transform .28s ease}.parts-menu.open .part-link{opacity:1;transform:translateY(0)}.parts-menu.open .part-link:nth-child(1){transition-delay:.04s}.parts-menu.open .part-link:nth-child(2){transition-delay:.075s}.parts-menu.open .part-link:nth-child(3){transition-delay:.11s}.parts-menu.open .part-link:nth-child(4){transition-delay:.145s}.parts-menu.open .part-link:nth-child(5){transition-delay:.18s}.part-link:hover{border-color:#7651c9;background:#3b82f61c}.part-link small{color:#9998ac;font-size:10px}@media(prefers-reduced-motion:reduce){.parts-menu,.part-link{transition:none!important;transform:none!important}.parts-menu.open .part-link{transition-delay:0s;opacity:1}}.parts-empty{font-size:10px;color:#9998ac;padding:8px}.delete-btn{border:1px solid #3c252d;background:#25151c;color:#fda4af;border-radius:9px;padding:8px 10px;font-size:11px}.empty{grid-column:1/-1;border:1px dashed #393544;border-radius:16px;text-align:center;padding:55px 20px;color:var(--muted)}.empty-icon{font-size:35px;margin-bottom:12px}.empty h3{color:#e5e2ef;margin:0 0 7px;font-size:15px}.empty p{font-size:12px;margin:0 0 17px}
+footer{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;color:#6f6d81;font-size:10px}.toast{position:fixed;bottom:24px;left:24px;background:#20202b;border:1px solid #454052;padding:12px 17px;border-radius:12px;box-shadow:0 15px 40px #0007;font-size:12px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translateY(0)}.modal-backdrop{display:none!important;position:fixed;inset:0;background:#050509b8;backdrop-filter:blur(7px);z-index:10;display:none;align-items:center;justify-content:center;padding:20px}.modal-backdrop.show{display:flex}.modal{width:min(520px,100%);border:1px solid #373344;background:#15141e;border-radius:20px;padding:24px;box-shadow:0 30px 100px #0009}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}.modal h2{font-size:19px;margin:0}.modal .sub{color:var(--muted);font-size:11px;margin:6px 0 20px}.close{border:1px solid var(--line);background:#22212c;color:#aaa;border-radius:9px;width:32px;height:32px}.dropzone{border:1px dashed #625084;border-radius:14px;background:#3b82f60a;padding:25px 15px;text-align:center;cursor:pointer}.dropzone:hover{background:#3b82f612}.dropzone .upicon{font-size:28px;color:#b69aff}.dropzone strong{display:block;font-size:12px;margin:8px 0 4px}.dropzone small{font-size:10px;color:var(--muted)}.picked{font-size:11px;color:#bfdbfe;margin-top:8px;overflow-wrap:anywhere}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#aaa8bb}.field input,.field select{width:100%;height:40px;border:1px solid var(--line);background:#0e0e15;color:#f5f4fa;border-radius:9px;padding:0 10px;outline:none;font-size:12px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}.cancel{border:1px solid var(--line);background:#22212b;color:#bbb;border-radius:10px;padding:10px 16px;font-size:12px}.save{border:0;background:linear-gradient(110deg,#3b82f6,#1d4ed8);color:white;border-radius:10px;padding:10px 17px;font-size:12px;font-weight:700}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.app{grid-template-columns:215px minmax(0,1fr)}.sidebar{padding:22px 13px}}
+@media(max-width:760px){.topbar{gap:10px;margin-bottom:25px}.donate-btn{padding:8px 10px;font-size:11px}.app{display:block}.sidebar{position:static;height:auto;padding:13px 16px;border-left:0;border-bottom:1px solid var(--line)}.brand{padding:0 2px 12px}.nav-label,.side-bottom{display:none}.nav{display:flex;overflow-x:auto}.nav button{white-space:nowrap;padding:9px 11px;font-size:11px}.nav-count{display:none}main{padding:23px 16px 35px}.topbar{margin-bottom:25px}.hero{align-items:flex-start;flex-direction:column;margin-bottom:23px;gap:15px}.upload-btn{width:100%;justify-content:center}.stats{gap:8px}.stat{padding:12px 10px;gap:8px;align-items:flex-start;flex-direction:column}.stat-icon{width:33px;height:33px;font-size:16px;border-radius:10px}.stat-value{font-size:19px}.stat-label{font-size:10px}.stat-note{display:none}.toolbar{align-items:flex-start;flex-direction:column}.filters{width:100%}.search{flex:1;min-width:0}.filters select{max-width:130px}.grid{gap:10px}.preview{height:115px}.file-glyph{width:54px;height:64px;font-size:15px}.card-body{padding:11px}.file-title{font-size:12px}.file-meta{font-size:9px}.card-bottom{flex-wrap:wrap}.download-btn,.delete-btn{font-size:10px;padding:7px}.admin-pill{font-size:10px}.crumb{font-size:10px}footer{flex-direction:column}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.preview{height:140px}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+
+/* Glassmorphism refresh */
+:root{--bg:#080910;--panel:rgba(24,22,39,.48);--panel2:rgba(31,28,49,.55);--line:rgba(255,255,255,.12);--text:#f7f5ff;--muted:#aaa6c0;--purple:#60a5fa;--pink:#bae6fd;--green:#6ee7b7}
+body{background:radial-gradient(ellipse at 12% 8%,rgba(37,99,235,.24),transparent 34%),radial-gradient(ellipse at 88% 24%,rgba(14,165,233,.14),transparent 30%),radial-gradient(ellipse at 55% 100%,rgba(14,165,233,.10),transparent 38%),#080910;background-attachment:fixed}
+.sidebar{background:rgba(15,14,27,.52);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);border-left-color:rgba(255,255,255,.1)}
+.side-bottom,.stat,.file-card,.icon-btn,.admin-pill,.search input,.filters select,.chip,.section-title span,.nav button.active,.nav button:hover{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.13);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%)}
+.side-bottom{background:linear-gradient(135deg,rgba(96,165,250,.13),rgba(255,255,255,.035));box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.stat{background:linear-gradient(135deg,rgba(255,255,255,.095),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 12px 35px rgba(0,0,0,.13);border-radius:20px}
+.file-card{background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.035));border-color:rgba(255,255,255,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 16px 42px rgba(0,0,0,.18);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%)}
+.file-card:hover{border-color:rgba(191,219,254,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 20px 48px rgba(0,0,0,.25)}
+.preview{background:radial-gradient(ellipse at 50% 100%,rgba(59,130,246,.35),transparent 62%),linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border-bottom:1px solid rgba(255,255,255,.07)}
+.file-glyph{background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.055));border-color:rgba(255,255,255,.28);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);box-shadow:0 16px 40px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.22)}
+.type-tag,.favorite{background:rgba(10,9,20,.42);border-color:rgba(255,255,255,.18);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.search input,.filters select,.field input,.field select{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.search input:focus,.filters select:focus,.field input:focus,.field select:focus{border-color:rgba(191,219,254,.75);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.chip{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.11)}
+.chip.active,.chip:hover{background:rgba(96,165,250,.17);border-color:rgba(191,219,254,.4);color:#eff6ff}
+.download-btn{background:linear-gradient(135deg,rgba(96,165,250,.20),rgba(125,211,252,.08));border-color:rgba(191,219,254,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.08);transition:background .22s,border-color .22s,transform .22s}
+.download-btn:hover{background:linear-gradient(135deg,rgba(96,165,250,.3),rgba(125,211,252,.15));border-color:rgba(147,197,253,.52);transform:translateY(-1px)}
+.parts-menu.open{background:rgba(20,17,35,.84);border-color:rgba(147,197,253,.26);box-shadow:0 18px 45px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.10);backdrop-filter:blur(24px) saturate(155%);-webkit-backdrop-filter:blur(24px) saturate(155%)}
+.part-link{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.11)}
+.part-link:hover{background:rgba(96,165,250,.15);border-color:rgba(191,219,254,.38)}
+footer{border-top-color:rgba(255,255,255,.12)}
+.toast,.modal{background:rgba(24,21,40,.82);border-color:rgba(255,255,255,.16);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);box-shadow:0 25px 80px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.1)}
+.dropzone{background:rgba(96,165,250,.07);border-color:rgba(191,219,254,.4)}
+@media(max-width:760px){.sidebar{background:rgba(15,14,27,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}.file-card{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}}
+@media(prefers-reduced-transparency:reduce){.sidebar,.side-bottom,.stat,.file-card,.icon-btn,.admin-pill,.search input,.filters select,.chip,.parts-menu.open,.toast,.modal{backdrop-filter:none;-webkit-backdrop-filter:none;background:#171522}}
+
+
+/* Purple-pink Glassmorphism theme */
+:root{--purple:#60a5fa;--pink:#bae6fd;--bg:#080910;--panel:rgba(24,22,39,.48);--panel2:rgba(31,28,49,.55);--line:rgba(255,255,255,.12);--text:#f7f5ff;--muted:#aaa6c0}
+body{background:radial-gradient(ellipse at 12% 8%,rgba(59,130,246,.20),transparent 34%),radial-gradient(ellipse at 88% 24%,rgba(125,211,252,.13),transparent 30%),radial-gradient(ellipse at 55% 100%,rgba(37,99,235,.10),transparent 38%),#080910;background-attachment:fixed}
+.brand-icon{background:linear-gradient(135deg,#93c5fd,#3b82f6 60%,#1e40af);box-shadow:0 8px 28px rgba(59,130,246,.24)}
+.nav button:hover,.nav button.active{background:rgba(96,165,250,.10);border-color:rgba(96,165,250,.28);color:#fff}
+.nav button.active .nav-ico,.eyebrow{color:#bfdbfe}
+.eyebrow:before{background:#60a5fa}
+.mini-progress span{background:linear-gradient(90deg,#60a5fa,#bae6fd)}
+.upload-btn,.save{background:linear-gradient(110deg,#3b82f6,#1d4ed8);box-shadow:0 8px 28px rgba(37,99,235,.24)}
+.upload-btn:hover{box-shadow:0 12px 32px rgba(37,99,235,.38)}
+.stat:first-child .stat-icon{background:rgba(96,165,250,.13);color:#bfdbfe}
+.search input:focus,.filters select:focus,.field input:focus,.field select:focus{border-color:rgba(96,165,250,.75);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.chip.active,.chip:hover{background:rgba(96,165,250,.13);border-color:rgba(96,165,250,.38);color:#dbeafe}
+.file-card:hover{border-color:rgba(96,165,250,.4)}
+.preview{background:radial-gradient(ellipse at 50% 100%,rgba(59,130,246,.28),transparent 62%),linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border-bottom-color:rgba(96,165,250,.1)}
+.download-btn{background:linear-gradient(135deg,rgba(96,165,250,.19),rgba(125,211,252,.08));border-color:rgba(96,165,250,.3);color:#dbeafe}
+.download-btn:hover{background:linear-gradient(135deg,rgba(96,165,250,.3),rgba(125,211,252,.15));border-color:rgba(191,219,254,.55)}
+.parts-menu.open{border-color:rgba(96,165,250,.28)}
+.part-link{color:#dbeafe}
+.part-link:hover{background:rgba(96,165,250,.13);border-color:rgba(96,165,250,.36)}
+.dropzone{background:rgba(96,165,250,.06);border-color:rgba(96,165,250,.38)}
+.dropzone .upicon,.picked{color:#bfdbfe}
+.side-bottom{background:linear-gradient(135deg,rgba(59,130,246,.11),rgba(255,255,255,.035))}
+@media(prefers-reduced-transparency:reduce){.sidebar,.side-bottom,.stat,.file-card,.icon-btn,.admin-pill,.search input,.filters select,.chip,.parts-menu.open,.toast,.modal{background:#1b1828}}
+
+
+/* Final blue / light-blue theme overrides */
+:root{--purple:#3b82f6;--pink:#7dd3fc;--green:#6ee7b7;--line:rgba(191,219,254,.14);--muted:#a8bfdc}
+body{background:radial-gradient(ellipse at 12% 8%,rgba(37,99,235,.32),transparent 40%),radial-gradient(ellipse at 88% 24%,rgba(14,165,233,.21),transparent 36%),radial-gradient(ellipse at 55% 100%,rgba(59,130,246,.17),transparent 46%),#080910;background-attachment:fixed}
+.brand-icon{background:linear-gradient(135deg,#bfdbfe,#3b82f6 60%,#1d4ed8)}
+.nav button:hover,.nav button.active{background:rgba(96,165,250,.12);border-color:rgba(147,197,253,.3)}
+.nav button.active .nav-ico,.eyebrow{color:#bfdbfe}
+.eyebrow:before{background:#60a5fa}
+.upload-btn,.save{background:linear-gradient(110deg,#3b82f6,#1d4ed8)}
+.chip.active,.chip:hover{background:rgba(96,165,250,.15);border-color:rgba(147,197,253,.4);color:#dbeafe}
+.file-card:hover{border-color:rgba(147,197,253,.42)}
+.download-btn{background:linear-gradient(135deg,rgba(96,165,250,.20),rgba(125,211,252,.09));border-color:rgba(147,197,253,.32);color:#dbeafe}
+.download-btn:hover{background:linear-gradient(135deg,rgba(96,165,250,.31),rgba(125,211,252,.16));border-color:rgba(191,219,254,.55)}
+.parts-menu.open{border-color:rgba(147,197,253,.3)}
+.part-link:hover{background:rgba(96,165,250,.15);border-color:rgba(147,197,253,.4)}
+.stat:nth-child(3) .stat-icon{background:rgba(125,211,252,.12);color:#bae6fd}
+.favorite.on{color:#bae6fd}
+.dropzone{border-color:rgba(147,197,253,.4)}
+.dropzone .upicon,.picked{color:#bfdbfe}
+
+
+/* شمارنده دانلود به‌طور کامل حذف شده؛ دو کارت آمار باقیمانده */
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H10l2 2h5.5A2.5 2.5 0 0 1 20 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5z"/><path d="M8 13h8M8 16h5"/></svg></div><div><div class="brand-name">بیرق پک</div><div class="brand-sub">آرشیو پک های رسانه هنری بیرق</div></div></div>
+  <div class="nav-label">فضای کاری</div>
+  <nav class="nav">
+    <button class="active" data-filter="all"><span class="nav-ico">▦</span> همه فایل‌ها <span class="nav-count" id="navAll">۰</span></button>
+    <button data-filter="favorites"><span class="nav-ico">♡</span> علاقه‌مندی‌ها</button>
+    <button data-filter="packs"><span class="nav-ico">▣</span> پک‌های آماده</button>
+    <button data-filter="recent"><span class="nav-ico">◷</span> تازه اضافه‌شده</button>
+  </nav>
+  <div class="nav-label" style="margin-top:23px">نوع فایل</div>
+  <nav class="nav">
+    <button data-category="پکیج"><span class="nav-ico">▣</span> پکیج</button>
+    <button data-category="لایه باز"><span class="nav-ico">▤</span> لایه باز</button>
+  </nav>
+  <div class="side-bottom"><strong>✦ رسانه هنری بیرق</strong><p>فایل‌های موردنیازت رو یک‌جا نگه دار و هر زمان خواستی دانلود کن.</p><div class="mini-progress"><span id="progress"></span></div></div>
+</aside>
+<main>
+  <div class="topbar"><div class="crumb">فضای کاری <span style="color:#555366">/</span> <b id="crumbTitle">همه فایل‌ها</b></div><div class="top-actions"><a class="donate-btn" href="https://eitaa.com/Beiragh_abzar" target="_blank" rel="noopener noreferrer" aria-label="حمایت مالی از کتابخانه"><span></span>کانال بیرق ابزار در ایتا</a></div></div>
+  <section class="hero"><div><div class="eyebrow">Beiragh_Media</div><h1> بهترین پک های گرافیکی به صورت <span style="background:linear-gradient(90deg,#bfdbfe,#bae6fd);-webkit-background-clip:text;background-clip:text;color:transparent">کاملا رایگان</span></h1><p>فایل‌های خلاقانه را مرور کن و با لینک مستقیم، دریافتشان کن.</p></div></section>
+  <section class="stats">
+    <div class="stat"><div class="stat-icon">▤</div><div><div class="stat-label">مجموع فایل‌ها</div><div class="stat-value" id="statFiles">۰</div><div class="stat-note">فایل در کتابخانه</div></div></div>
+    <div class="stat"><div class="stat-icon">◈</div><div><div class="stat-label">حجم پک ها</div><div class="stat-value" id="statSize">۰ MB</div><div class="stat-note">حجم فایل‌های ثبت‌شده</div></div></div>
+  </section>
+  <div class="toolbar"><div class="section-title">آرشیو پک <span id="resultCount">۰ مورد</span></div><div class="filters"><div class="search"><input id="search" type="search" placeholder="جستجو بین فایل‌ها..." aria-label="جستجو"></div><select id="sort"><option value="new">جدیدترین</option><option value="name">نام فایل</option><option value="size">حجم فایل</option></select></div></div>
+  <div class="category-row" id="chips"><button class="chip active" data-chip="همه">همه فایل‌ها</button><button class="chip" data-chip="پکیج">پکیج</button><button class="chip" data-chip="لایه باز">لایه باز</button></div>
+  <section class="grid" id="fileGrid"></section>
+  <footer><span>© ۲۰۲۶ آرشیو پک · تمام حق و نشر این سایت برای رسانه هنری بیرق محفوظ است</span><span>آرشیو پک · دریافت از لینک مستقیم</span></footer>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const fa=n=>Number(n||0).toLocaleString('fa-IR');
+const formatSize=b=>b<1024?`${b} B`:b<1048576?`${(b/1024).toFixed(1)} KB`:`${(b/1048576).toFixed(1)} MB`;
+const typeOf=name=>{const ext=(name.split('.').pop()||'FILE').toUpperCase();return ext.length>5?'FILE':ext};
+const colors={پکیج:['#3b82f6','#bfdbfe'],'لایه باز':['#0ea5e9','#bae6fd'],گرافیک:['#3b82f6','#bfdbfe'],ویدیو:['#2563eb','#60a5fa'],صوت:['#0ea5e9','#bae6fd'],فونت:['#1e40af','#60a5fa'],سایر:['#6366f1','#a5b4fc']};
+// فایل‌ها را از آرایه PACK_FILES پایین همین فایل HTML مدیریت کن. شمارنده دانلود از کل سایت حذف شده است.
+const PACK_FILES = [
+  {
+    id: 'pack-01',
+    name: 'پکیج لایه باز 2',
+    filename: 'pack.rar',
+    category: 'پکیج',
+    imageUrl: 'Pack-01.jpg', // نام عکس همین فایل، مثلاً 'pack-01.jpg' یا یک لینک https مستقیم
+    desc: 'مجموعه از پوستر لایه باز هیئتی',
+    size: 838900000,
+    favorite: false,
+    pinned: false, // برای سنجاق‌کردن این فایل true و برای بقیه false باشد
+    downloadUrl: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/',
+    parts: [
+      { name: 'پارت 1', url: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/' },
+      { name: 'پارت 2', url: 'https://abrehamrahi.ir/o/public/LQ1pv94l/' }
+    ],
+    created: Date.now()
+  },
+  {
+    id: 'pack-02',
+    name: 'پکیج ماه رمضان',
+    filename: 'pack.rar',
+    category: 'پکیج',
+    imageUrl: 'Pack-02.jpg', // نام عکس همین فایل، مثلاً 'pack-01.jpg' یا یک لینک https مستقیم
+    desc: 'پک جامع ویژه ماه رمضان و شب قدر',
+    size: 3145700000,
+    favorite: false,
+    pinned: false, // برای سنجاق‌کردن این فایل true و برای بقیه false باشد
+    downloadUrl: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/',
+    parts: [
+      { name: 'پارت 1', url: 'https://abrehamrahi.ir/o/public/sUQlciIA/' },
+      { name: 'پارت 2', url: 'https://abrehamrahi.ir/o/public/3SjHEob7/' },
+      { name: 'پارت 3', url: 'https://abrehamrahi.ir/o/public/6k3xzogw/' },
+      { name: 'پارت 4', url: 'https://abrehamrahi.ir/o/public/8ab7EKG0/' },
+      { name: 'پارت 5', url: 'https://abrehamrahi.ir/o/public/UZCCqft5/' },
+      { name: 'پارت 6', url: 'https://abrehamrahi.ir/o/public/hdIeNAMd/' }
+    ],
+    created: Date.now()
+  },
+  {
+    id: 'pack-03',
+    name: 'پکیج امیرالمومنین',
+    filename: 'pack.rar',
+    category: 'پکیج',
+    imageUrl: 'Pack-03.jpg', // نام عکس همین فایل، مثلاً 'pack-01.jpg' یا یک لینک https مستقیم
+    desc: 'پک جامع ویژه ولادت امیرالمومنین (ع)',
+    size: 2097100000,
+    favorite: false,
+    pinned: false, // برای سنجاق‌کردن این فایل true و برای بقیه false باشد
+    downloadUrl: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/',
+    parts: [
+      { name: 'پارت 1', url: 'https://s34.picofile.com/file/8488936476/Pack_Emam_Ali_Beiragh_part1.rar.html' },
+      { name: 'پارت 2', url: 'https://s34.picofile.com/file/8488937168/Pack_Emam_Ali_Beiragh_part2.rar.html' },
+      { name: 'پارت 3', url: 'https://s34.picofile.com/file/8488937234/Pack_Emam_Ali_Beiragh_part3.rar.html' },
+      { name: 'پارت 4', url: 'https://s34.picofile.com/file/8488937384/Pack_Emam_Ali_Beiragh_part4.rar.html' },
+    ],
+    created: Date.now()
+  },
+  {
+    id: 'pack-04',
+    name: 'پکیج نیمه شعبان',
+    filename: 'pack.rar',
+    category: 'پکیج',
+    imageUrl: 'Pack-04.jpg', // نام عکس همین فایل، مثلاً 'pack-01.jpg' یا یک لینک https مستقیم
+    desc: 'پک جامع ویژه نیمه شعبان و ولادت حضرت صاحب الزمان (عج)',
+    size: 1677700000,
+    favorite: false,
+    pinned: false, // برای سنجاق‌کردن این فایل true و برای بقیه false باشد
+    downloadUrl: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/',
+    parts: [
+      { name: 'پارت 1', url: 'https://abrehamrahi.ir/o/public/gObgHSVT/' },
+      { name: 'پارت 2', url: 'https://abrehamrahi.ir/o/public/OWuJMmut/' },
+      { name: 'پارت 3', url: 'https://abrehamrahi.ir/o/public/tcf0TAoO/' },
+      { name: 'پارت 4', url: 'https://abrehamrahi.ir/o/public/iqjTfsh5/' },
+    ],
+    created: Date.now()
+  },
+  {
+    id: 'pack-05',
+    name: 'پکیج فاطمیه',
+    filename: 'pack.rar',
+    category: 'پکیج',
+    imageUrl: 'Pack-05.jpg', // نام عکس همین فایل، مثلاً 'pack-01.jpg' یا یک لینک https مستقیم
+    desc: 'پک جامع ویژه ایام فاطمیه',
+    size: 1677700000,
+    favorite: false,
+    pinned: true, // برای سنجاق‌کردن این فایل true و برای بقیه false باشد
+    downloadUrl: 'https://abrehamrahi.ir/o/public/AAqTFZ8l/',
+    parts: [
+      { name: 'پارت 1', url: 'https://abrehamrahi.ir/o/public/40K4s6SX/' },
+      { name: 'پارت 2', url: 'https://abrehamrahi.ir/o/public/PPhIebZO/' },
+      { name: 'پارت 3', url: 'https://abrehamrahi.ir/o/public/ASjjNiD8/' },
+      { name: 'پارت 4', url: 'https://abrehamrahi.ir/o/public/Axq1Hpno/' },
+    ],
+    created: Date.now()
+  }
+];
+let files=[],activeFilter='all',activeCategory='همه';
+try{
+ const saved=JSON.parse(localStorage.getItem('packLibraryMeta')||'null');
+ // اطلاعات نمایشی همیشه از PACK_FILES می‌آید؛ فقط شمارنده دانلود و علاقه‌مندی از مرورگر حفظ می‌شود.
+ // بنابراین تغییر نام/توضیحات و افزودن یا حذف فایل در کد، بعد از ذخیره و بارگذاری مجدد اعمال می‌شود.
+ files=PACK_FILES.map(item=>{
+   const old=Array.isArray(saved)?saved.find(x=>x.id===item.id):null;
+   return {...item,favorite:old?.favorite??item.favorite};
+ });
+ localStorage.setItem('packLibraryConfigVersion','4');
+}catch(e){files=PACK_FILES.map(x=>({...x}));}
+function persist(){try{localStorage.setItem('packLibraryMeta',JSON.stringify(files.map(({dataUrl,...f})=>({...f}))))}catch(e){}}
+function toast(msg){$('#toast').textContent=msg;$('#toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2600)}
+function categoryColor(cat){return colors[cat]||colors['پکیج']}
+function visibleFiles(){
+ let list=files.slice();
+ const q=$('#search').value.trim().toLowerCase();
+ if(activeFilter==='favorites')list=list.filter(f=>f.favorite);
+ if(activeFilter==='packs')list=list.filter(f=>/zip|rar|7z|pack/i.test(f.filename||f.name));
+ if(activeFilter==='recent')list=list.filter(f=>!f.sample).concat(list.filter(f=>f.sample));
+ if(activeCategory!=='همه')list=list.filter(f=>f.category===activeCategory);
+ if(q)list=list.filter(f=>(f.name+' '+f.filename+' '+f.desc+' '+f.category).toLowerCase().includes(q));
+ const sort=$('#sort').value;
+ list.sort((a,b)=>{
+   const pinnedFirst=Number(Boolean(b.pinned))-Number(Boolean(a.pinned));
+   if(pinnedFirst)return pinnedFirst;
+   if(sort==='name')return a.name.localeCompare(b.name,'fa');
+   if(sort==='size')return (b.size||0)-(a.size||0);
+   return (b.created||0)-(a.created||0);
+ });
+ return list;
+}
+function showCodeHelp(){
+ alert("برای افزودن فایل، پوشه‌ای به نام files کنار فایل HTML بساز و فایل‌ها را داخل آن بگذار. سپس در کد، آرایه PACK_FILES را با اطلاعات فایل پر کن. مقدار downloadUrl باید مسیر نسبی فایل مثل files/pack.zip یا لینک https مستقیم باشد. بعد فایل HTML و پوشه files را با هم روی هاست قرار بده.");
+}
+function render(){const list=visibleFiles();$('#fileGrid').innerHTML='';$('#resultCount').textContent=fa(list.length)+' مورد';$('#navAll').textContent=fa(files.length);$('#statFiles').textContent=fa(files.length);const bytes=files.reduce((s,f)=>s+(f.size||0),0);$('#statSize').textContent=bytes>=1073741824?(bytes/1073741824).toFixed(1)+' GB':(bytes/1048576).toFixed(1)+' MB';$('#progress').style.width=Math.min(100,files.length*10)+'%';
+if(!list.length){$('#fileGrid').innerHTML='<div class="empty"><div class="empty-icon">⌕</div><h3>فایلی پیدا نشد</h3><p>عبارت جستجو یا فیلترها رو تغییر بده، یا فایل جدیدی اضافه کن.</p></div>';return}
+list.forEach(f=>{const ext=f.category==='پکیج'?'RAR':f.category==='لایه باز'?'PSD':typeOf(f.filename||f.name),c=categoryColor(f.category);const glyph=escapeHtml(ext==='OTF'||ext==='TTF'?'Aa':ext==='MP3'||ext==='WAV'?'♫':ext==='MP4'||ext==='MOV'?'▶':ext==='PSD'?'Ps':ext==='ZIP'||ext==='RAR'||ext==='7Z'?'ZIP':ext);const previewVisual=f.imageUrl?`<img class="preview-image" src="${escapeHtml(f.imageUrl)}" alt="${escapeHtml(f.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';this.parentElement.classList.add('no-image')"><div class="file-glyph" style="display:none;border-color:${c[1]}66">${glyph}</div>`:`<div class="file-glyph" style="border-color:${c[1]}66">${glyph}</div>`;const card=document.createElement('article');card.className='file-card'+(f.pinned?' is-pinned':'');card.innerHTML=`<div class="preview" style="background:radial-gradient(ellipse at 50% 100%,${c[0]}66,transparent 60%),linear-gradient(135deg,${c[0]}33,${c[1]}22,#14131f)"><span class="type-tag">${escapeHtml(ext)}</span><button class="favorite ${f.favorite?'on':''}" title="علاقه‌مندی" data-fav="${f.id}">${f.favorite?'♥':'♡'}</button>${f.pinned?'<span class="pin-badge" title="سنجاق‌شده" aria-label="سنجاق‌شده"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4V2h6v2l-1 1v5l3 3v2H7v-2l3-3V5L9 4Z"/><path d="M12 17v5"/></svg></span>':''}${previewVisual}</div><div class="card-body"><div class="file-title" title="${escapeHtml(f.name)}">${escapeHtml(f.name)}</div><div class="file-desc">${escapeHtml(f.desc||f.filename||'بدون توضیحات')}</div><div class="file-meta"><span>◈ ${escapeHtml(f.category)}</span><span>▤ ${formatSize(f.size||0)}</span></div><div class="card-bottom"><button class="download-btn" data-download="${f.id}" aria-expanded="false">↓ دریافت فایل <span aria-hidden="true">⌄</span></button><div class="parts-menu" data-parts-menu="${f.id}"></div></div></div>`;$('#fileGrid').appendChild(card)});
+}
+function escapeHtml(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function setDownloadLink(fileId, url){
+ const f=files.find(x=>x.id===fileId);
+ if(!f)return;
+ f.downloadUrl=url.trim();
+ persist();render();
+ toast('لینک دانلود ذخیره شد.');
+}
+$('#fileGrid').addEventListener('click',e=>{
+ const fav=e.target.closest('[data-fav]');
+ if(fav){const f=files.find(x=>x.id===fav.dataset.fav);if(f){f.favorite=!f.favorite;persist();render()}return}
+ const part=e.target.closest('[data-part-url]');
+ if(part){
+   const fileId=part.dataset.fileId;
+   const f=files.find(x=>x.id===fileId);if(!f)return;
+   const url=part.dataset.partUrl;
+   if(!url){toast('برای این پارت هنوز لینک دانلود ثبت نشده است.');return;}
+   const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.download='';document.body.appendChild(a);a.click();a.remove(); return;
+ }
+ const dl=e.target.closest('[data-download]');
+ if(dl){
+   e.preventDefault();
+   e.stopPropagation();
+   const card=dl.closest('.file-card');
+   const menu=card?.querySelector('.parts-menu');
+   if(!card||!menu)return;
+   const cardIndex=[...document.querySelectorAll('#fileGrid .file-card')].indexOf(card);
+   const f=visibleFiles()[cardIndex];
+   if(!f)return;
+   const wasOpen=menu.classList.contains('open');
+   // Each card's menu toggles independently; other open menus remain open.
+   if(wasOpen){
+     menu.classList.remove('open');
+     menu.closest('.file-card')?.classList.remove('menu-open');
+     dl.setAttribute('aria-expanded','false');
+     return;
+   }
+   const hasParts=Array.isArray(f.parts)&&f.parts.length>0;
+   if(hasParts){
+     menu.innerHTML=f.parts.map((part,i)=>`<button class="part-link" type="button" data-part-url="${escapeHtml(part.url||'')}" data-file-id="${escapeHtml(f.id)}"><span>${escapeHtml(part.name||`پارت ${i+1}`)}</span><small>دریافت ↙</small></button>`).join('');
+     menu.classList.add('open');
+     card.classList.add('menu-open');
+     dl.setAttribute('aria-expanded','true');
+     return;
+   }
+   if(f.downloadUrl){
+     const a=document.createElement('a');a.href=f.downloadUrl;a.download=f.filename||'';a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove(); return;
+   }
+   toast('برای این فایل لینک دانلود در کد تعریف نشده است.');return;
+ }
+});
+$('#search').addEventListener('input',render);$('#sort').addEventListener('change',render);
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{activeFilter=b.dataset.filter;activeCategory='همه';document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('[data-chip]').forEach(x=>x.classList.toggle('active',x.dataset.chip==='همه'));$('#crumbTitle').textContent=({all:'همه فایل‌ها',favorites:'علاقه‌مندی‌ها',packs:'پک‌های آماده',recent:'تازه اضافه‌شده'})[activeFilter];render()});
+document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{activeFilter='all';activeCategory=b.dataset.category;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x.dataset.filter==='all'));document.querySelectorAll('[data-chip]').forEach(x=>x.classList.toggle('active',x.dataset.chip===activeCategory));$('#crumbTitle').textContent=activeCategory;render()});
+document.querySelectorAll('[data-chip]').forEach(b=>b.onclick=()=>{activeCategory=b.dataset.chip;activeFilter='all';document.querySelectorAll('[data-chip]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x.dataset.filter==='all'));$('#crumbTitle').textContent=activeCategory==='همه'?'همه فایل‌ها':activeCategory;render()});
+render();
+</script>
+</body>
+</html>
